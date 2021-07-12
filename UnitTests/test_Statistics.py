@@ -4,6 +4,7 @@ from Statistics import Statistics
 from Statistics.Mean import Mean
 from Statistics.Median import Median
 from Statistics.Mode import Mode
+from Statistics.StandardDeviation import StandardDeviation
 from Statistics.Variance import Variance
 from random_generator import generator
 import pprint
@@ -73,6 +74,19 @@ class MyTestCase(unittest.TestCase):
             variance = Variance.variance(k)
             self.assertAlmostEqual(variance, statistics.variance(k), 3)
         print("Variance Test cases passed")
+
+    def test_standardDeviation_calculator(self):
+
+        # test_data = [getSampleList(0, 10 ** 6, 10 ** 2) for i in range(100)]
+        for k in self.test_data_int:
+            sd = StandardDeviation.standardDeviation(k)
+            self.assertAlmostEqual(sd, statistics.stdev(k), 3)
+
+        # test_data = [getSampleListDecimal(0, 10 ** 6, 10 ** 2) for i in range(100)]
+        for k in self.test_data_dec:
+            sd = StandardDeviation.standardDeviation(k)
+            self.assertAlmostEqual(sd, statistics.stdev(k), 3)
+        print("Standard Deviation Test cases passed")
 
 
 if __name__ == '__main__':
