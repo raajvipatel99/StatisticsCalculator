@@ -4,6 +4,7 @@ from Statistics import Statistics
 from Statistics.Mean import Mean
 from Statistics.Median import Median
 from Statistics.Mode import Mode
+from Statistics.Variance import Variance
 from random_generator import generator
 import pprint
 from random_generator.generator import getSampleListNonRepeating, getSampleListDecimalNonRepeating
@@ -58,6 +59,20 @@ class MyTestCase(unittest.TestCase):
             actual_mode = statistics.multimode(k)
             self.assertListEqual(mode, actual_mode)
         print("Mode Test cases passed")
+
+    def test_variance_calculator(self):
+
+        # test_data = [getSampleList(0, 10 ** 6, 10 ** 2) for i in range(100)]
+        for k in self.test_data_int:
+            variance = Variance.variance(k)
+            # self.assertEqual(abs(variance - statistics.variance(k)) < 10 ** -5, True)
+            self.assertAlmostEqual(variance, statistics.variance(k), 3)
+
+        # test_data = [getSampleListDecimal(0, 10 ** 6, 10 ** 2) for i in range(100)]
+        for k in self.test_data_dec:
+            variance = Variance.variance(k)
+            self.assertAlmostEqual(variance, statistics.variance(k), 3)
+        print("Variance Test cases passed")
 
 
 if __name__ == '__main__':
