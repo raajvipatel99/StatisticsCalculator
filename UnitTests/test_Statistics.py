@@ -3,6 +3,7 @@ import unittest
 from Statistics import Statistics
 from Statistics.Mean import Mean
 from Statistics.Median import Median
+from Statistics.Mode import Mode
 from random_generator import generator
 import pprint
 from random_generator.generator import getSampleListNonRepeating, getSampleListDecimalNonRepeating
@@ -42,6 +43,21 @@ class MyTestCase(unittest.TestCase):
             # self.assertEqual(abs(median - statistics.median(k)) < 10 ** -5, True)
             self.assertEqual(median, statistics.median(k))
         print("Median Test cases passed")
+
+    def test_mode_calculator(self):
+
+        test_data = [getSampleListNonRepeating(0, 10, 100) for i in range(10)]
+        for k in test_data:
+            mode = Mode.mode(k)
+            actual_mode = statistics.multimode(k)
+            self.assertListEqual(mode, actual_mode)
+
+        test_data = [getSampleListDecimalNonRepeating(0, 1, 10 ** 2) for i in range(10)]
+        for k in test_data:
+            mode = Mode.mode(k)
+            actual_mode = statistics.multimode(k)
+            self.assertListEqual(mode, actual_mode)
+        print("Mode Test cases passed")
 
 
 if __name__ == '__main__':

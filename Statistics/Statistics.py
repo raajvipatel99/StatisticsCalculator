@@ -1,4 +1,5 @@
 from Statistics.Median import Median
+from Statistics.Mode import Mode
 from calculator import Calculatorr
 from Statistics import Mean
 
@@ -19,6 +20,13 @@ class Statistics(Calculatorr.Calculator):
     def median(self, sample_data):
         try:
             self.result = Median.median(sample_data)
+            return self.result
+        except Exception as e:
+            raise Exception("Statistics Exception" + e)
+
+    def mode(self, sample_data):
+        try:
+            self.result = Mode.mode(sample_data)
             return self.result
         except Exception as e:
             raise Exception("Statistics Exception" + e)
