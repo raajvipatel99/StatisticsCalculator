@@ -14,36 +14,22 @@ class Statistics(Calculatorr.Calculator):
         super().__init__()
 
     def mean(self, sample_data):
-        try:
-            self.result = mean(sample_data)
-            return self.result
-        except Exception as e:
-            raise Exception("Statistics Exception" + e)
+        self.result = mean(sample_data)
+        return self.result
 
     def median(self, sample_data):
-        try:
-            self.result = median(sample_data)
-            return self.result
-        except Exception as e:
-            raise Exception("Statistics Exception" + e)
+        self.result = median(sample_data)
+        return self.result
 
     def mode(self, sample_data):
-        try:
-            self.result = mode(sample_data)
-            return self.result
-        except Exception as e:
-            raise Exception("Statistics Exception" + e)
+        self.result = mode(sample_data)
+        return self.result
 
     def variance(self, sample_data):
-        try:
-            self.result = variance(sample_data)
-            return self.result
-        except Exception as e:
-            raise Exception("Statistics Exception" + e)
+        self.result = variance(sample_data)
+        return self.result
 
     def standardDeviation(self, sample_data):
-        try:
-            self.result = standardDeviation(sample_data)
-            return self.result
-        except Exception as e:
-            raise Exception("Statistics Exception" + e)
+        self.result = standardDeviation(sample_data)
+        return self.result
+
