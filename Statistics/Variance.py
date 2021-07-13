@@ -17,17 +17,3 @@ def variance(data):
     except ValueError:
         print("Error: Data can't be string")
         return None
-
-
-# def variance(data):
-#     try:
-#         n = len(data)
-#         mean = sum(data) / n
-#         deviations = [(x - mean) ** 2 for x in data]
-#         return sum(deviations) / (n - 1)
-#     except ZeroDivisionError:
-#         print("Error: Can't Divide by 0")
-#         return None
-#     except ValueError:
-#         print("Error: Data can't be string")
-#         return None
