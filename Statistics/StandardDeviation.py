@@ -1,12 +1,7 @@
 from calculator import SquareRoot
-from Statistics import Variance
+from Statistics.Variance import variance
 
 
-class StandardDeviation:
-    def __init__(self):
-        pass
-
-    @staticmethod
-    def standardDeviation(data):
-        sd = SquareRoot.SquareRoot.squareroot(Variance.Variance.variance(data))
-        return sd
+def standardDeviation(data):
+    sd = SquareRoot.SquareRoot.squareroot(variance(data))
+    return sd
