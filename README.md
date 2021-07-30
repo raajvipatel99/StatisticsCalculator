@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.com/raajvipatel99/StatisticsCalculator.svg?branch=master)](https://travis-ci.com/raajvipatel99/StatisticsCalculator)
 
-Successful build through Travis CI
+## Successful build through Travis CI
 
 ## Description
 
@@ -22,5 +22,8 @@ Use random data for tests and be able to increase the number of calculations req
 
 ## Program Outline
 
-This project demonstrates inheritance by extending the Calculator (calculator/Calculator.py) by Statistics (Statistics/Statistics.py). The functions added to the statistics calculator are mean, median, mode, variance and standard deviation. These functions are imported from Mean.py, Median.py, Mode.py, Variance.py and StandardDeviation.py. In order to test these statistical functions, unit test cases are written in calculator/test_StatisticsTest.py and values for checking them are generated using Random class.
+Inheritance: extending the Calculator (calculator/Calculator.py) by Statistics (Statistics/Statistics.py). 
+Functions added to the statistics calculator are mean, median, mode, variance and standard deviation. 
+These functions are imported from Mean.py, Median.py, Mode.py, Variance.py and StandardDeviation.py. 
+In order to test these statistical functions, unit test cases are written in calculator/test_StatisticsTest.py and values for checking them are generated using Random Generator class.
 
